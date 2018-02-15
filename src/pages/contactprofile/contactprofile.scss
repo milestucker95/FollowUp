@@ -1,0 +1,30 @@
+
+
+page-contactprofile {
+  .profilebackground{
+    background-color: #282828;
+  }
+
+  ion-avatar > img {
+    width:100% !important;
+height : 100% !important;
+max-width: 100px !important;  //any size
+max-height: 100px !important;
+margin:auto;
+border-bottom-style: none;
+  }
+
+  ul {
+  padding: 0px;
+
+  &.rating li {
+    padding: 5px 10px !important;
+    background: none;
+    color: #488aff;
+
+    ion-icon {
+      font-size: 30px;
+    }
+  }
+}
+}

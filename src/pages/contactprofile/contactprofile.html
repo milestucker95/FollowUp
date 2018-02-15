@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Genuity</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="profilebackground">
+  <!-- <ion-card> -->
+  <ion-card>
+
+        <ion-item>
+            <ion-avatar>
+                <img src="/assets/imgs/sampleheadshot.jpg">
+            </ion-avatar>
+          <p text-center>Jimmy Turner</p>
+          <button ion-button (click)="showImage(myImage)">View Card</button>
+          <div hidden>
+            <img src="/assets/imgs/samplecard.png" #myImage />
+          </div>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='person' item-start style="color: #d03e84"></ion-icon>
+            Name
+            <ion-badge item-end>Jimmy Turner</ion-badge>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name='people' item-start style="color: #55acee"></ion-icon>
+            Contacts
+            <ion-badge item-end>300</ion-badge>
+          </ion-item>
+          <ion-item>
+            Company
+            <ion-badge item-end>Google</ion-badge>
+          </ion-item>
+          <ion-item>
+            Title
+            <ion-badge item-end>Product Manager</ion-badge>
+          </ion-item>
+          <ion-item>
+            Email
+            <ion-badge item-end>jimmyturner95@gmail.com</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="phone-portrait"></ion-icon>
+              <ion-badge item-end>972-245-6529</ion-badge>
+            </ion-item>
+          <ion-item>
+              <ion-icon name='logo-linkedin'></ion-icon>
+              linkedin
+              <ion-badge item-end>linkedin/jimmyturner95</ion-badge>
+            </ion-item>
+            <ion-row>
+              <ion-col width-50 style="text-align:center">
+                    <button ion-button round outline>More info</button>
+              </ion-col>
+            </ion-row>
+
+            <div hidden>
+              <ion-item>
+                Event
+                <ion-badge item-end>Entrepreneurs' Camp</ion-badge>
+              </ion-item>
+              <ion-item>
+                Location
+                 <ion-icon name="locate"></ion-icon>
+                  <ion-badge item-end>Seattle, WA</ion-badge>
+                </ion-item>
+              <ion-item>
+                Additional Notes
+                  <ion-icon name='logo-linkedin'></ion-icon>
+                  linkedin
+                  <ion-badge item-end>linkedin/milestucker95</ion-badge>
+                </ion-item>
+            </div>
+        </ion-card>
+  <!-- </ion-card> -->
+<div>
+  <ion-row>
+    <button ion-button>Rating</button>
+    <rating [(ngModel)]="rate"
+        readOnly="false"
+        max="5"
+        emptyStarIconName="star-outline"
+        halfStarIconName="star-half"
+        starIconName="star"
+        nullable="false"
+       >
+    </rating>
+  </ion-row>
+</div>
+  <!-- <ion-card>
+    <ion-item>
+        <ion-icon name='star'></ion-icon>
+        Rating
+        < <ion-badge item-end>linkedin/jimmyturner95</ion-badge> -->
+      <!-- </ion-item>
+    </ion-card> -->
+    <ion-card>
+      <ion-item>
+      <ion-icon name='link'></ion-icon>
+     Shared Interaction
+      <p>Talked about entrepreneurship and we both want to get involved in the artificial intelligence industry.
+      </ion-item>
+  </ion-card>
+  <!-- <div>
+    <div>
+    <ion-label>Name</ion-label>
+    <p> Miles Tucker</p>
+  </div>
+    <ion-label>Company</ion-label>
+    <p>Microsoft</p>
+    <ion-label>Role</ion-label>
+    <p>Sofware Engineer</p>
+  </div> -->
+  <!-- <button ion-button>Scan Barcode</button> -->
+</ion-content>
+<!-- myImage.showImage = false; -->

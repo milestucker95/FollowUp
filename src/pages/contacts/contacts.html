@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contacts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-label>FilterBy</ion-label>
+  <ion-select [(ngModel)]="toppings" multiple="true">
+    <ion-option>Recency</ion-option>
+    <ion-option>Event</ion-option>
+    <ion-option>Location</ion-option>
+    <ion-option>Rating</ion-option>
+
+  </ion-select>
+</ion-item>
+  <ion-scroll style="height: 800px">
+  <!-- <ion-list>
+    <ion-item *ngFor="let song of songs | async">
+        {{song.title}}
+    </ion-item>
+  </ion-list> -->
+  <ion-list>
+    <button ion-item *ngFor="let p of items">
+      <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+      {{p.title}}
+      <div class="item-note" item-end>
+        {{p.note}}
+      </div>
+    </button>
+    <!-- <ion-item *ngFor="let p of items | async" (click)="showOptions(connection.id, song.name)"> -->
+  </ion-list>
+</ion-scroll>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
+
+<!-- <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCNZ7NFZRM90Qxla8olQl-phdVvuH1RHHw",
+    authDomain: "followup-33af7.firebaseapp.com",
+    databaseURL: "https://followup-33af7.firebaseio.com",
+    projectId: "followup-33af7",
+    storageBucket: "followup-33af7.appspot.com",
+    messagingSenderId: "892514328340"
+  };
+  firebase.initializeApp(config);
+</script> -->

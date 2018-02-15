@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Genuity</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="profilebackground">
+  <!-- <ion-card> -->
+  <ion-card>
+
+        <ion-item>
+            <ion-avatar>
+                <img src="/assets/imgs/milesHeadshot.jpg">
+            </ion-avatar>
+            <button default ion-button item-right>Edit</button>
+          <p text-center>Miles Tucker</p>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='person' item-start style="color: #d03e84"></ion-icon>
+            Name
+            <ion-badge item-end>Miles Tucker</ion-badge>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name='people' item-start style="color: #55acee"></ion-icon>
+            Contacts
+            <ion-badge item-end>300</ion-badge>
+          </ion-item>
+          <ion-item>
+            Company
+            <ion-badge item-end>Microsoft</ion-badge>
+          </ion-item>
+          <ion-item>
+            Title
+            <ion-badge item-end>Software Engineer</ion-badge>
+          </ion-item>
+          <ion-item>
+            Email
+            <ion-badge item-end>mileswtucker95@gmail.com</ion-badge>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="phone-portrait"></ion-icon>
+              <ion-badge item-end>314-265-5522</ion-badge>
+            </ion-item>
+          <ion-item>
+              <ion-icon name='logo-linkedin'></ion-icon>
+              linkedin
+              <ion-badge item-end>linkedin/milestucker95</ion-badge>
+            </ion-item>
+        </ion-card>
+  <!-- </ion-card> -->
+  <button ion-button (click)="showImage(myImage)">My Card</button>
+  <div hidden>
+    <img src="/assets/imgs/samplecard.png" #myImage />
+  </div>
+  <!-- <div>
+    <div>
+    <ion-label>Name</ion-label>
+    <p> Miles Tucker</p>
+  </div>
+    <ion-label>Company</ion-label>
+    <p>Microsoft</p>
+    <ion-label>Role</ion-label>
+    <p>Sofware Engineer</p>
+  </div> -->
+  <!-- <button ion-button>Scan Barcode</button> -->
+</ion-content>
+<!-- myImage.showImage = false; -->

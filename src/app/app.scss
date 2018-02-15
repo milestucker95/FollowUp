@@ -14,3 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+ion-avatar > img {
+  width:100% !important;
+height : 100% !important;
+max-width: 100px !important;  //any size
+max-height: 100px !important;
+margin:auto;
+border-bottom-style: none;
+}
+
+.menubackground{
+  background-color:#282828;
+}
+.menubutton{
+  background-color: #282828;
+  color:white;
+
+}
+// .list a.item{
+//   border-style: none;
+// }

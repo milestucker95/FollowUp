@@ -1,0 +1,44 @@
+<ion-content class ="login" padding>
+
+      <ion-item>
+        <ion-avatar>
+          <img src="/assets/imgs/milesHeadshot.jpg">
+        </ion-avatar>
+      </ion-item>
+
+      <ion-card-content>
+
+        <ion-list no-lines>
+
+          <ion-item>
+            <ion-label floating>email</ion-label>
+            <ion-input [(ngModel)]="email" (change)="emailChanged()" type="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>password</ion-label>
+            <ion-input [(ngModel)]="password" type="password"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+      </ion-card-content>
+
+
+    <button ion-button icon-right outline color="primary">Login <ion-icon name="arrow-forward"></ion-icon></button>
+    <button ion-button icon-right outline color="primary">Register <ion-icon name="arrow-forward"></ion-icon></button>
+
+</ion-content>
+<!-- <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+  </head>
+  <body ng-app="app">
+      <ion-content fb-image="http://mrg.bz/anX4Pa">
+      </ion-content>
+  </body>
+</html> -->

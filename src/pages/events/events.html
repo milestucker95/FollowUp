@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Events</ion-title>
+    <ion-buttons end>
+  <button ion-button icon-only (click)="addevent()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-buttons>
+      <!-- <ion-icon  item-end name='add'></ion-icon> -->
+      <!-- <ion-badge item-end>300</ion-badge> -->
+    <!-- <ion-icon text-right name="add"></ion-icon> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-scroll style="height: 800px">
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+      {{item.title}}
+      <div class="item-note" item-end>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+</ion-scroll>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
