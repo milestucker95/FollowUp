@@ -13,22 +13,29 @@ import {MessagesPage} from '../pages/messages/messages';
 import {ContactProfilePage} from '../pages/contactprofile/contactprofile';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { Ionic2RatingModule } from 'ionic2-rating';
-
+import {FIREBASE_CONFIG} from './app.firebase.config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import md5 from 'crypto-md5';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import {LoginPageModule} from '../pages/login/login.module';
+import {ProfilePageModule} from '../pages/profile/profile.module';
+// import {HttpModule} from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+// import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 
-export const firebaseConfig = {
-  apiKey: "",
- authDomain: "",
- databaseURL: "",
- storageBucket: "",
- messagingSenderId: ""
-};
+// export const firebaseConfig = {
+//     apiKey: "AIzaSyCNZ7NFZRM90Qxla8olQl-phdVvuH1RHHw",
+//     authDomain: "followup-33af7.firebaseapp.com",
+//     databaseURL: "https://followup-33af7.firebaseio.com",
+//     projectId: "followup-33af7",
+//     storageBucket: "followup-33af7.appspot.com",
+//     messagingSenderId: "892514328340"
+//   };
 
 @NgModule({
   declarations: [
@@ -36,18 +43,21 @@ export const firebaseConfig = {
     EventsPage,
     ContactPage,
     ConnectPage,
-    LoginPage,
-    ProfilePage,
     MessagesPage,
     ContactProfilePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    LoginPageModule,
+    ProfilePageModule,
     IonicImageViewerModule,
     Ionic2RatingModule
+    // HttpModule,
+
 
   ],
   bootstrap: [IonicApp],
@@ -56,7 +66,6 @@ export const firebaseConfig = {
     EventsPage,
     ContactPage,
     ConnectPage,
-    LoginPage,
     ProfilePage,
     MessagesPage,
     ContactProfilePage
@@ -65,7 +74,9 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthServiceProvider
+    // FirebaseServiceProvider
   ]
 })
 export class AppModule {}

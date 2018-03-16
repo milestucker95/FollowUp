@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, IonicPage } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -13,7 +13,6 @@ import {MessagesPage} from '../pages/messages/messages';
 import {ContactProfilePage} from '../pages/contactprofile/contactprofile';
 
 import md5 from 'crypto-md5';
-
 @Component({
   templateUrl: 'app.html'
 })
