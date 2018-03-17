@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar color="primary">
     <button ion-button menuToggle>
@@ -6,7 +7,8 @@
     <ion-title>Genuity</ion-title>
   </ion-navbar>
 </ion-header>
-
+<!-- <script src="cordova.js"></script>
+<script type="text/javascript" src="profile.js"></script> -->
 <ion-content padding class="profilebackground">
   <!-- <ion-card> -->
   <ion-card>
@@ -15,13 +17,14 @@
             <ion-avatar>
                 <img src="/assets/imgs/milesHeadshot.jpg">
             </ion-avatar>
-            <button default ion-button item-right>Edit</button>
-          <p text-center>Miles Tucker</p>
+            <button ion-button default ion-button item-right  (click)="buttonSave()">Save</button>
+          <!-- <p id="name" text-center>Miles Tucker</p> -->
         </ion-item>
         <ion-item>
             <ion-icon name='person' item-start style="color: #d03e84"></ion-icon>
             Name
-            <ion-badge item-end>Miles Tucker</ion-badge>
+            <!-- <ion-badge id="name" item-end></ion-badge> -->
+            <ion-input [(ngModel)]="myInput" type="text" item-end></ion-input>
           </ion-item>
 
           <ion-item>

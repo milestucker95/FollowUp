@@ -4,6 +4,8 @@ import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-sca
 import { ImageViewerController } from 'ionic-img-viewer';
 
 import { ActionSheetController, IonicPage } from 'ionic-angular';
+import { AngularFireDatabase } from "angularfire2/database";
+import { AngularFireAuth } from "angularfire2/auth";
 
 @IonicPage(
 {
@@ -19,10 +21,20 @@ export class ProfilePage {
 
 _imageViewerCtrl: ImageViewerController;
 
-constructor(public actionSheetCtrl: ActionSheetController, imageViewerCtrl: ImageViewerController) {
-  this._imageViewerCtrl = imageViewerCtrl;
-}
+arrData = []
+myInput
 
+constructor(public actionSheetCtrl: ActionSheetController, imageViewerCtrl: ImageViewerController, private fdb: AngularFireDatabase) {
+  this._imageViewerCtrl = imageViewerCtrl;
+  this.fdb.list('/people/').subscribe(_data=>{
+    this.arrData = _data;
+    // console.log(this.arrData);
+  });
+
+}
+    buttonSave(){
+        this.fdb.list('/people/').push(this.myInput);
+  }
   showImage(myImage) {
       const imageViewer = this._imageViewerCtrl.create(myImage);
       imageViewer.present();
