@@ -1,7 +1,76 @@
 page-login {
   .loginbackground{
-    background-color: #282828;
+    background-image: url('../assets/imgs/bluebackground.jpg');
   }
+
+  h1{
+    font-style:italic;
+    font-family: serif;
+    font-size: 50px;
+  }
+  // .loginbackground{
+  //   background-color: #282828;
+  // }
+  .scroll-content{
+    align-content: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ion-card.card{
+    box-shadow: none;
+    background: rgba(0, 0, 0,0.3);
+    border-radius: 5px;
+  }
+
+  a,b,
+  ion-card-header.card-header{
+    color:#fff;
+  }
+
+  // .list>.item-block:firstChild{
+  //   border: medium none;
+  // }
+
+  .item{
+    margin-bottom: 10px;
+    background: none;
+    border:medium none;
+
+    .text-input,{
+      color: #fff;
+    }
+
+    input::-moz-placeholder{
+      color:#fff!important;
+    }
+
+    input:-moz-placeholder{
+      color:#fff!important;
+    }
+
+    *::-webkit-input-placeholder{
+      color:#fff!important;
+    }
+
+    *:-ms-input-placeholder{
+      color:#fff!important;
+    }
+
+    *:-moz-input-placeholder{
+      color:#fff!important;
+    }
+
+  }
+
+  .icon{
+    padding-right: 10px;
+  }
+
+
+
   #title{
     color:#ffffff;
   }

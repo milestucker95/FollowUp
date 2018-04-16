@@ -4,30 +4,62 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Genuity</ion-title>
+    <ion-title>FollowUp</ion-title>
   </ion-navbar>
 </ion-header>
 <!-- <script src="cordova.js"></script>
 <script type="text/javascript" src="profile.js"></script> -->
 <ion-content padding class="profilebackground">
-  <!-- <ion-card> -->
+
   <ion-card>
 
         <ion-item>
             <ion-avatar>
-                <img src="/assets/imgs/milesHeadshot.jpg">
+                <!-- <img src="/assets/imgs/milesHeadshot.jpg"> -->
+                <img [src]="base64Image" *ngIf="base64Image" />
+
             </ion-avatar>
-            <button ion-button default ion-button item-right  (click)="buttonSave()">Save</button>
-          <!-- <p id="name" text-center>Miles Tucker</p> -->
+            <button ion-button default ion-button item-right  (click)="takePhoto()">Edit Photo</button>
         </ion-item>
         <ion-item>
             <ion-icon name='person' item-start style="color: #d03e84"></ion-icon>
-            Name
-            <!-- <ion-badge id="name" item-end></ion-badge> -->
-            <ion-input [(ngModel)]="myInput" type="text" item-end></ion-input>
+            <!-- Username: -->
+            <ion-badge item-end> {{(profileData | async)?.username}}</ion-badge>
+
           </ion-item>
 
           <ion-item>
+              <!-- <ion-icon name='person' item-start style="color: #d03e84"></ion-icon> -->
+              Name:
+              <ion-badge item-end> {{(profileData | async)?.firstname}}</ion-badge>
+
+            </ion-item>
+            <ion-item>
+                <!-- <ion-icon name='person' item-start style="color: #d03e84"></ion-icon> -->
+                Email:
+                <ion-badge item-end>{{(profileData | async)?.email}}</ion-badge>
+
+              </ion-item>
+
+              <ion-item>
+                  <!-- <ion-icon name='person' item-start style="color: #d03e84"></ion-icon> -->
+                  Phonenumber:
+                  <ion-badge item-end> {{(profileData | async)?.phonenumber}}</ion-badge>
+
+                </ion-item>
+                <ion-item>
+                    <!-- <ion-icon name='person' item-start style="color: #d03e84"></ion-icon> -->
+                    Company:
+                    <ion-badge item-end> {{(profileData | async)?.company}}</ion-badge>
+
+                  </ion-item>
+                  <ion-item>
+                    Role:
+                      <!-- <ion-icon name='person' item-start style="color: #d03e84"></ion-icon> -->
+                      <ion-badge item-end>{{(profileData | async)?.role}}</ion-badge>
+
+                    </ion-item>
+          <!-- <ion-item>
             <ion-icon name='people' item-start style="color: #55acee"></ion-icon>
             Contacts
             <ion-badge item-end>300</ion-badge>
@@ -52,10 +84,9 @@
               <ion-icon name='logo-linkedin'></ion-icon>
               linkedin
               <ion-badge item-end>linkedin/milestucker95</ion-badge>
-            </ion-item>
+            </ion-item> -->
         </ion-card>
-  <!-- </ion-card> -->
-  <button ion-button (click)="showImage(myImage)">My Card</button>
+  <!-- <button ion-button (click)="showImage(myImage)">My Card</button> -->
   <div hidden>
     <img src="/assets/imgs/samplecard.png" #myImage />
   </div>

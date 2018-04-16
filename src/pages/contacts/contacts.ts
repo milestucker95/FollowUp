@@ -19,7 +19,6 @@ export class ContactPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
-    // this.connections = afDatabase.list('/connections').valueChanges();
 
   // this.selectedItem = navParams.get('item');
 

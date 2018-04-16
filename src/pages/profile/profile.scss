@@ -2,7 +2,7 @@
 
 page-profile {
     .profilebackground{
-      background-color: #282828;
+      background-image: url('../assets/imgs/bluebackground.jpg');
     }
 
   ion-avatar > img {
@@ -13,4 +13,30 @@ max-height: 100px !important;
 margin:auto;
 border-bottom-style: none;
   }
+
+  .scroll-content{
+    // align-content: center;
+    display:flex;
+    flex-direction: column;
+    // justify-content: center;
+    text-align: center;
+  }
+
+  ion-card.card{
+    box-shadow: none;
+    background: rgba(0, 0, 0,0.3);
+    // border-radius: 5px;
+  }
+
+  .item{
+    margin-bottom: 10px;
+    background: none;
+    border: medium none;
+    color:#fff!important;
+  }
+
+  // a,b,
+  // ion-card-header.card-header{
+  //   color:#fff;
+  // }
 }

@@ -26,6 +26,11 @@ import {ProfilePageModule} from '../pages/profile/profile.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {Camera} from "@ionic-native/camera";
+import { ImageProvider } from '../providers/image/image';
+import { PreloaderProvider } from '../providers/preloader/preloader';
+import { DatabaseProvider } from '../providers/database/database';
+import { PhotoLibrary } from '@ionic-native/photo-library';
 // import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 
 // export const firebaseConfig = {
@@ -74,8 +79,13 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    ImageProvider,
+    PreloaderProvider,
+    DatabaseProvider,
+    PhotoLibrary
     // FirebaseServiceProvider
   ]
 })

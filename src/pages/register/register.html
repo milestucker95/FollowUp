@@ -1,5 +1,5 @@
 <!--
-  Generated template for the RegisterPage page.
+  Generated template for the LoginPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,26 +7,46 @@
 <!-- <ion-header>
 
   <ion-navbar>
-    <ion-title>register</ion-title>
+    <ion-title>login</ion-title>
   </ion-navbar>
 
 </ion-header> -->
 
 
 <ion-content padding class="registerbackground">
+  <div id="title">
+  <h1 text-center>FollowUp</h1>
+</div>
+<ion-card>
+  <ion-card-header text-center> Sign Up</ion-card-header>
+  <ion-card-content>
   <ion-list>
     <ion-item>
-      <ion-label floating color="primary"> Email </ion-label>
-      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>
+      <!-- <ion-label> Email </ion-label> -->
+      <ion-input type="text" placeholder = "Email" [(ngModel)] = "user.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating color="primary">Password </ion-label>
-      <ion-input type="password" [(ngModel)] = "user.password"></ion-input>
+      <!-- <ion-label>Password </ion-label> -->
+      <ion-input type="password" placeholder="Password" [(ngModel)] = "user.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <!-- <ion-label>Password </ion-label> -->
+      <ion-input type="password" placeholder="Confirm Password" [(ngModel)] = "user.confirmedPassword"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-row>
-    <ion-col width-50 style="text-align:center">
-          <button color ="light" ion-button outline full (click)="register(user)">Sign up</button>
-    </ion-col>
-  </ion-row>
+</ion-card-content>
+</ion-card>
+
+<ion-row>
+  <ion-col width-50 style="text-align:center">
+        <button color ="light" ion-button outline block (click)="register(user)">Sign up</button>
+        <a>OR</a>
+        <button ion-button color="button-positive" block outline (click)="login(user)">Sign in</button>
+  </ion-col>
+</ion-row>
+
+
 </ion-content>
+<!-- <ion-footer>
+  <button ion-button color="button-positive" block outline (click)="login(user)">Sign in</button>
+</ion-footer> -->

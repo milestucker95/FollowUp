@@ -26,11 +26,17 @@ border-bottom-style: none;
 }
 
 .menubackground{
-  background-color:#282828;
+  // background-color:#282828;
+  background-image: url('../assets/imgs/bluebackground.jpg');
+  // box-shadow: none;
+  // background: rgba(0, 0, 0,0.3);
+
 }
 .menubutton{
-  background-color: #282828;
+  background:none;
   color:white;
+  box-shadow: none;
+  background: rgba(0, 0, 0,0.3);
 
 }
 // .list a.item{

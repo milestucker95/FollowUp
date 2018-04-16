@@ -17,20 +17,28 @@
   <div id="title">
   <h1 text-center>FollowUp</h1>
 </div>
+<ion-card>
+  <ion-card-header text-center> Login</ion-card-header>
+  <ion-card-content>
   <ion-list>
     <ion-item>
-      <ion-label floating color="primary"> Email </ion-label>
-      <ion-input type="text" [(ngModel)] = "user.email"></ion-input>
+      <!-- <ion-label> Email </ion-label> -->
+      <ion-input type="text" placeholder = "Email" [(ngModel)] = "user.email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating color="primary">Password </ion-label>
-      <ion-input type="password" [(ngModel)] = "user.password"></ion-input>
+      <!-- <ion-label>Password </ion-label> -->
+      <ion-input type="password" placeholder="Password" [(ngModel)] = "user.password"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-row>
-    <ion-col width-50 style="text-align:center">
-          <button ion-button full outline (click)="login(user)">Sign in</button>
-          <button color ="light" ion-button outline full (click)="register()">Sign up</button>
-    </ion-col>
-  </ion-row>
+</ion-card-content>
+</ion-card>
+
+<ion-row>
+  <ion-col width-50 style="text-align:center">
+        <button ion-button color="button-positive" block outline (click)="login(user)">Sign in</button>
+        <!-- <a>Forgot login details?<b>Get help signing in</b></a> -->
+        <a>OR</a>
+        <button color ="light" ion-button outline block (click)="register()">Sign up</button>
+  </ion-col>
+</ion-row>
 </ion-content>

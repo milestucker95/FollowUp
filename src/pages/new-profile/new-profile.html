@@ -13,22 +13,47 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="background">
+  <ion-card>
+    <ion-card-header text-center> Add New Info</ion-card-header>
 <ion-item>
-    <ion-label>Username</ion-label>
-    <ion-input [(ngModel)] = "profile.username"></ion-input>
+    <ion-input placeholder="Username" [(ngModel)] = "profile.username"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label>Firstname</ion-label>
-    <ion-input [(ngModel)] = "profile.firstname"></ion-input>
+    <ion-input placeholder="Email" [(ngModel)] = "profile.email"></ion-input>
+</ion-item>
+
+
+<ion-item>
+    <ion-input placeholder="First Name" [(ngModel)] = "profile.firstname"></ion-input>
 </ion-item>
 
 <ion-item>
-    <ion-label>Lastname</ion-label>
-    <ion-input [(ngModel)] = "profile.lastname"></ion-input>
+    <ion-input placeholder="Last Name" [(ngModel)] = "profile.lastname"></ion-input>
+</ion-item>
+<!--
+<ion-item>
+    <ion-input placeholder="Email" [(ngModel)] = "profile.email"></ion-input>
+</ion-item> -->
+
+<ion-item>
+    <ion-input placeholder="Phone Number" [(ngModel)] = "profile.phonenumber"></ion-input>
 </ion-item>
 
-<button ion-button clear block (click)="create()"></button>
+<ion-item>
+    <ion-input placeholder="Company/School" [(ngModel)] = "profile.company"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-input placeholder="Role" [(ngModel)] = "profile.role"></ion-input>
+</ion-item>
+<ion-row>
+  <ion-col width-50 style="text-align:center">
+    <button ion-button color="light" outline  (click)="create()">Create</button>
+  </ion-col>
+</ion-row>
+<!-- </ion-card-header> -->
+</ion-card>
+<!-- <button ion-button clear block (click)="create()">Create</button> -->
 </ion-content>

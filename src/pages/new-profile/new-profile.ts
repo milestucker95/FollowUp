@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Profile } from "../../models/profile";
 import { AngularFireDatabase } from "angularfire2/database";
+import { User } from "../../models/user";
 
 /**
  * Generated class for the NewProfilePage page.
@@ -19,6 +20,7 @@ import { AngularFireDatabase } from "angularfire2/database";
 export class NewProfilePage {
 
   profile = {} as Profile;
+  // user = {} as User;
 
   constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase,
 
@@ -27,9 +29,20 @@ export class NewProfilePage {
 
   create(){
     this.afAuth.authState.take(1).subscribe(auth=>{
-        this.afDatabase.list('/profile/${auth.uid}').push(this.profile)
-        .then(() => this.navCtrl.push('ProfilePage'));
+      // firebase.database().ref('profile/' + auth.uid).set({
+      //   user_id: auth.uid,
+      //   email: auth.email
+      //   //some more user data
+      // });
+
+        this.afDatabase.object(`profile / ${auth.uid}`).set(this.profile)
+        .then(() => this.navCtrl.setRoot("profile"));
+
+
     })
+
+
+
   }
 
 }
