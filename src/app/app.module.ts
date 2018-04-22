@@ -31,6 +31,7 @@ import { ImageProvider } from '../providers/image/image';
 import { PreloaderProvider } from '../providers/preloader/preloader';
 import { DatabaseProvider } from '../providers/database/database';
 import { PhotoLibrary } from '@ionic-native/photo-library';
+import { AngularFireDatabase } from "angularfire2/database-deprecated";
 // import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 
 // export const firebaseConfig = {
@@ -85,7 +86,8 @@ import { PhotoLibrary } from '@ionic-native/photo-library';
     ImageProvider,
     PreloaderProvider,
     DatabaseProvider,
-    PhotoLibrary
+    PhotoLibrary,
+    AngularFireDatabase
     // FirebaseServiceProvider
   ]
 })

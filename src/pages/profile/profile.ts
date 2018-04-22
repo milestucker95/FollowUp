@@ -4,7 +4,7 @@ import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-sca
 import { ImageViewerController } from 'ionic-img-viewer';
 
 import { ActionSheetController, IonicPage, ToastController } from 'ionic-angular';
-import { AngularFireDatabase, FirebaseObjectObservable } from "angularfire2/database";
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Profile } from "../../models/profile";
 import { storage, initializeApp} from "firebase";
